@@ -340,7 +340,7 @@ public class RedwoodTrunkPlacer extends TrunkPlacer {
                                         {{3}, {2}}};
         } else {
             xBoundArr = new int[]{6, 5, 4, 3, 3, 2};
-            zBoundArr = new int[][][]{{{2, 4, 5, 5, 6}, {0, 0, 0, 0, 0}},
+            zBoundArr = new int[][][]{{{2, 4, 5, 5, 6, 6}, {0, 0, 0, 0, 0, 0}},
                                         {{4, 5, 5, 6, 6}, {1, 1, 1, 1, 1}},
                                         {{3, 4, 4, 5}, {1, 1, 1, 1}},
                                         {{3, 4, 4, 5}, {2, 2, 2, 3}},
@@ -357,7 +357,9 @@ public class RedwoodTrunkPlacer extends TrunkPlacer {
                 int zSkip = zSkipLayer[j];
                 for (int z = -zBound; z <= zBound; z++) {
                     if(Math.abs(z) > zSkip) {
-                        this.placeBlock(rootPos.offset(x, 0, z), NaturaWoodTypes.REDWOOD.root.get().defaultBlockState());
+                        BlockPos pos = rootPos.offset(x, 0, z);
+                        if (!level.isStateAtPosition(pos, state -> state.is(Blocks.BEDROCK)))
+                        this.placeBlock(pos, NaturaWoodTypes.REDWOOD.root.get().defaultBlockState());
                     }
                 }
             }
