@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "natura:block/willow_planks",
+    "east": "natura:block/willow_workbench_face",
+    "north": "natura:block/willow_workbench_face",
+    "south": "natura:block/willow_workbench_side",
+    "up": "natura:block/willow_workbench_top",
+    "west": "natura:block/willow_workbench_side"
+  }
+}

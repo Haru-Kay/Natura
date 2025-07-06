@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "natura:block/hopseed_planks",
+    "east": "natura:block/hopseed_workbench_face",
+    "north": "natura:block/hopseed_workbench_face",
+    "south": "natura:block/hopseed_workbench_side",
+    "up": "natura:block/hopseed_workbench_top",
+    "west": "natura:block/hopseed_workbench_side"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_chiseled_bookshelf_slot_top_right",
+  "textures": {
+    "texture": "natura:block/eucalyptus_chiseled_bookshelf_empty"
+  }
+}

@@ -1,0 +1,15 @@
+// 1.20.1	2025-06-28T12:07:30.0735306	Tags for minecraft:block mod id natura
+d3440499ac80e98a8a757a48d2c16adf5952bacf data/minecraft/tags/blocks/ceiling_hanging_signs.json
+356065cd8e40419eec134a54d3ac81cd97671940 data/minecraft/tags/blocks/enchantment_power_provider.json
+9a2cd34b9c84f3fbb8aff2e90ada466fa409fb48 data/minecraft/tags/blocks/fences.json
+e9f6079ab6ab24d7c655931f8d42fe13e5d9279a data/minecraft/tags/blocks/fence_gates.json
+8168cdbf32022fdc68f0427f013221b1efdb6eab data/minecraft/tags/blocks/leaves.json
+51da05aff60e779e10cacc67de92731aec7591c1 data/minecraft/tags/blocks/logs.json
+51da05aff60e779e10cacc67de92731aec7591c1 data/minecraft/tags/blocks/logs_that_burn.json
+3641a150dceb7a5bffc901852b53e835eae0c567 data/minecraft/tags/blocks/planks.json
+3f3627fa14ad849a8b82654a976e0420e23e25d1 data/minecraft/tags/blocks/saplings.json
+d52ec5203d480804fa5ebc78cee1aa4a32c237af data/minecraft/tags/blocks/standing_signs.json
+1dbf0f31320e3d21f8b60b0d1ebc8b8d3d43940f data/minecraft/tags/blocks/wall_hanging_signs.json
+11b339c0d09898342f8c6c48c5aec1b227c5d2b3 data/minecraft/tags/blocks/wall_signs.json
+307060c5072896e8b1ec8db9082f8434e2c1a393 data/minecraft/tags/blocks/wooden_doors.json
+9706c8250f57427ed2b263a66901ef81cab4591d data/minecraft/tags/blocks/wooden_trapdoors.json
