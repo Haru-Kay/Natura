@@ -348,18 +348,17 @@ public class RedwoodTrunkPlacer extends TrunkPlacer {
                                         {{4, 3}, {2, 2}}};
         }
         int xBound = xBoundArr[root];
-        int[][] zLayer = zBoundArr[root];
-
-        int xDir = -1;
-        int zIndex = 0;
-        for (int x = 0; x >= 0; x -= xDir) {
+        int[] zLayer = zBoundArr[root][0];
+        int[] zSkipLayer = zBoundArr[root][1];
+        for (int x = -xBound; x <= xBound; x++) {
             if(x != 0) {
-                int xCoord = (x - xBound) * -xDir;
-                System.out.println(x);
-
-
-                if (x > xBound) {
-                    xDir *= -1;
+                int j = xBound + ((x > 0 ? -1 : 1) * x);
+                int zBound = zLayer[j];
+                int zSkip = zSkipLayer[j];
+                for (int z = -zBound; z <= zBound; z++) {
+                    if(Math.abs(z) > zSkip) {
+                        this.placeBlock(rootPos.offset(x, 0, z), NaturaWoodTypes.REDWOOD.root.get().defaultBlockState());
+                    }
                 }
             }
         }
