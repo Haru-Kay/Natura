@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_plains",
+  "features": "natura:eucalyptus_tree_plains",
+  "step": "vegetal_decoration"
+}

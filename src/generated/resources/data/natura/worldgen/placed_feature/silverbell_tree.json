@@ -1,5 +1,5 @@
 {
-  "feature": "natura:maple_tree",
+  "feature": "natura:silverbell_tree",
   "placement": [
     {
       "type": "minecraft:count",
@@ -7,11 +7,11 @@
         "type": "minecraft:weighted_list",
         "distribution": [
           {
-            "data": 1,
-            "weight": 9
+            "data": 0,
+            "weight": 69
           },
           {
-            "data": 2,
+            "data": 1,
             "weight": 1
           }
         ]
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "natura:maple_sapling",
+          "Name": "natura:silverbell_sapling",
           "Properties": {
             "stage": "0"
           }

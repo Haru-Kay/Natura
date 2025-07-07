@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_forest",
-  "features": "natura:maple_tree",
+  "features": "natura:tiger_tree",
   "step": "vegetal_decoration"
 }
