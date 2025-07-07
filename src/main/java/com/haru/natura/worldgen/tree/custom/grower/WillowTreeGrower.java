@@ -11,6 +11,6 @@ public class WillowTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.WILLOW_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.WILLOW_TREE_BEES : NaturaConfiguredFeatures.WILLOW_TREE;
     }
 }

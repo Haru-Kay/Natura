@@ -11,6 +11,6 @@ public class SilverbellTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.SILVERBELL_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.SILVERBELL_TREE_BEES : NaturaConfiguredFeatures.SILVERBELL_TREE;
     }
 }

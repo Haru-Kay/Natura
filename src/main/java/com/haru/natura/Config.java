@@ -22,6 +22,42 @@ public class Config
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
+    public static boolean generateRedwood = false;
+
+    public static boolean generateMaple = true;
+    public static boolean generateSilverbell = true;
+    public static boolean generateAmaranth = true;
+    public static boolean generateTiger = true;
+
+    public static boolean generateWillow = true;
+    public static boolean generateEucalyptus = true;
+    public static boolean generateHopseed = true;
+    public static boolean generateSakura = true;
+
+    public static boolean generateBloodwood = true;
+    public static boolean generateDarkwood = true;
+    public static boolean generateFusewood = true;
+    public static boolean generateGhostwood = true;
+
+    public static int redwoodSpawnRarity = 150;
+
+    public static int mapleRarity = 10;
+    public static int silverbellRarity = 70;
+    public static int amaranthRarity = 1;
+    public static int tigerRarity = 32;
+
+    public static int willowRarity = 10;
+    public static int eucalyptusSpawnRarity = 25;
+    public static int eucalyptusSpawnRange = 32;
+    public static int hopseedSpawnRarity = 10;
+    public static int hopseedSpawnRange = 20;
+    public static int sakuraSpawnRarity = 10;
+    public static int sakuraSpawnRange = 32;
+
+    public static int bloodwoodSpawnRarity = 14;
+    public static int darkwoodSpawnRarity = 10;
+    public static int fusewoodSpawnRarity = 50;
+    public static int ghostwoodSpawnRarity = 10;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)

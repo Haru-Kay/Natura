@@ -32,7 +32,7 @@ public class RedwoodTreeGrower extends AbstractMegaTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredMegaFeature(RandomSource pRandom) {
-        return NaturaConfiguredFeatures.REDWOOD_TREE_KEY;
+        return NaturaConfiguredFeatures.REDWOOD_TREE;
     }
 
     List<BlockPos> saplings = new ArrayList<>(49);
@@ -94,7 +94,7 @@ public class RedwoodTreeGrower extends AbstractMegaTreeGrower {
                     //saplings.add(List.of(xStart + x, 0, zStart + z));
                     saplings.add(pPos.offset(xStart + x, 0, zStart + z));
                 } else {
-                    return true;
+                    return false;
                 }
             }
         }

@@ -11,6 +11,6 @@ public class HopseedTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.HOPSEED_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.HOPSEED_TREE_BEES : NaturaConfiguredFeatures.HOPSEED_TREE;
     }
 }

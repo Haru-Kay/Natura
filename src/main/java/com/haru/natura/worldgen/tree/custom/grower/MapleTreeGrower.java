@@ -11,6 +11,6 @@ public class MapleTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.MAPLE_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.MAPLE_TREE_BEES : NaturaConfiguredFeatures.MAPLE_TREE;
     }
 }

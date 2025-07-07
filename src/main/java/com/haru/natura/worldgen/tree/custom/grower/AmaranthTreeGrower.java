@@ -11,6 +11,6 @@ public class AmaranthTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.AMARANTH_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.AMARANTH_TREE_BEES : NaturaConfiguredFeatures.AMARANTH_TREE;
     }
 }

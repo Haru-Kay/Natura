@@ -27,30 +27,30 @@ import java.util.List;
 import java.util.OptionalInt;
 
 public class NaturaConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH_TREE_KEY = registerKey("amaranth_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH_TREE_BEES_KEY = registerKey("amaranth_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EUCALYPTUS_TREE_KEY = registerKey("eucalyptus_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> EUCALYPTUS_TREE_BEES_KEY = registerKey("eucalyptus_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HOPSEED_TREE_KEY = registerKey("hopseed_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> HOPSEED_TREE_BEES_KEY = registerKey("hopseed_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_TREE_KEY = registerKey("maple_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_TREE_BEES_KEY = registerKey("maple_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> REDWOOD_TREE_KEY = registerKey("redwood_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE_KEY = registerKey("sakura_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE_BEES_KEY = registerKey("sakura_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBELL_TREE_KEY = registerKey("silverbell_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBELL_TREE_BEES_KEY = registerKey("silverbell_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TIGER_TREE_KEY = registerKey("tiger_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> TIGER_TREE_BEES_KEY = registerKey("tiger_tree_bees");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> WILLOW_TREE_KEY = registerKey("willow_tree");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> WILLOW_TREE_BEES_KEY = registerKey("willow_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH_TREE = registerKey("amaranth_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMARANTH_TREE_BEES = registerKey("amaranth_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EUCALYPTUS_TREE = registerKey("eucalyptus_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EUCALYPTUS_TREE_BEES = registerKey("eucalyptus_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HOPSEED_TREE = registerKey("hopseed_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HOPSEED_TREE_BEES = registerKey("hopseed_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_TREE = registerKey("maple_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_TREE_BEES = registerKey("maple_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDWOOD_TREE = registerKey("redwood_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE = registerKey("sakura_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SAKURA_TREE_BEES = registerKey("sakura_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBELL_TREE = registerKey("silverbell_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBELL_TREE_BEES = registerKey("silverbell_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TIGER_TREE = registerKey("tiger_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TIGER_TREE_BEES = registerKey("tiger_tree_bees");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILLOW_TREE = registerKey("willow_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILLOW_TREE_BEES = registerKey("willow_tree_bees");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         //RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
 
         //List<OreConfiguration.TargetBlockState> overworldOakOre = List.of(OreConfiguration.target(stoneReplaceable,
         //        Blocks.OAK_LOG.defaultBlockState()));
-        //register(context, OVERWORLD_WOOD_KEY, Feature.ORE, new OreConfiguration(overworldOakOre, 9));
+        //register(context, OVERWORLD_WOOD, Feature.ORE, new OreConfiguration(overworldOakOre, 9));
 
         var amaranthBuilder = new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NaturaWoodTypes.AMARANTH.log.get()),
@@ -59,8 +59,8 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, AMARANTH_TREE_KEY, Feature.TREE, amaranthBuilder.build());
-        register(context, AMARANTH_TREE_BEES_KEY, Feature.TREE,
+        register(context, AMARANTH_TREE, Feature.TREE, amaranthBuilder.build());
+        register(context, AMARANTH_TREE_BEES, Feature.TREE,
                 amaranthBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var eucalyptusBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -70,8 +70,8 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, EUCALYPTUS_TREE_KEY, Feature.TREE, eucalyptusBuilder.build());
-        register(context, EUCALYPTUS_TREE_BEES_KEY, Feature.TREE,
+        register(context, EUCALYPTUS_TREE, Feature.TREE, eucalyptusBuilder.build());
+        register(context, EUCALYPTUS_TREE_BEES, Feature.TREE,
                 eucalyptusBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var hopseedBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -81,8 +81,8 @@ public class NaturaConfiguredFeatures {
                 new HopseedFoliagePlacer(ConstantInt.of(5), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 2, 2)).ignoreVines();
 
-        register(context, HOPSEED_TREE_KEY, Feature.TREE, hopseedBuilder.build());
-        register(context, HOPSEED_TREE_BEES_KEY, Feature.TREE,
+        register(context, HOPSEED_TREE, Feature.TREE, hopseedBuilder.build());
+        register(context, HOPSEED_TREE_BEES, Feature.TREE,
                 hopseedBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var mapleBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -92,8 +92,8 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, MAPLE_TREE_KEY, Feature.TREE, mapleBuilder.build());
-        register(context, MAPLE_TREE_BEES_KEY, Feature.TREE,
+        register(context, MAPLE_TREE, Feature.TREE, mapleBuilder.build());
+        register(context, MAPLE_TREE_BEES, Feature.TREE,
                 mapleBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var sakuraBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -103,8 +103,8 @@ public class NaturaConfiguredFeatures {
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines(); //needs heightmap for placed feature
 
-        register(context, SAKURA_TREE_KEY, Feature.TREE, sakuraBuilder.build());
-        register(context, SAKURA_TREE_BEES_KEY, Feature.TREE,
+        register(context, SAKURA_TREE, Feature.TREE, sakuraBuilder.build());
+        register(context, SAKURA_TREE_BEES, Feature.TREE,
                 sakuraBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var silverbellBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -114,8 +114,8 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, SILVERBELL_TREE_KEY, Feature.TREE, silverbellBuilder.build());
-        register(context, SILVERBELL_TREE_BEES_KEY, Feature.TREE,
+        register(context, SILVERBELL_TREE, Feature.TREE, silverbellBuilder.build());
+        register(context, SILVERBELL_TREE_BEES, Feature.TREE,
                 silverbellBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var tigerBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -125,8 +125,8 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, TIGER_TREE_KEY, Feature.TREE, tigerBuilder.build());
-        register(context, TIGER_TREE_BEES_KEY, Feature.TREE,
+        register(context, TIGER_TREE, Feature.TREE, tigerBuilder.build());
+        register(context, TIGER_TREE_BEES, Feature.TREE,
                 tigerBuilder.decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
         var willowBuilder = new TreeConfiguration.TreeConfigurationBuilder(
@@ -137,8 +137,8 @@ public class NaturaConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 1));
 
         TreeConfiguration willowWithVines = willowBuilder.decorators(List.of(new WillowVineDecorator(0.25F))).build();
-        register(context, WILLOW_TREE_KEY, Feature.TREE, willowWithVines);
-        register(context, WILLOW_TREE_BEES_KEY, Feature.TREE,
+        register(context, WILLOW_TREE, Feature.TREE, willowWithVines);
+        register(context, WILLOW_TREE_BEES, Feature.TREE,
                 willowBuilder.decorators(List.of(new WillowVineDecorator(0.25F), new BeehiveDecorator(0.05F))).build());
 
 
@@ -149,7 +149,7 @@ public class NaturaConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines();
 
-        register(context, REDWOOD_TREE_KEY, Feature.TREE, redwoodBuilder.build());
+        register(context, REDWOOD_TREE, Feature.TREE, redwoodBuilder.build());
                 
 
     }

@@ -11,6 +11,6 @@ public class EucalyptusTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return NaturaConfiguredFeatures.EUCALYPTUS_TREE_KEY;
+        return pHasFlowers ? NaturaConfiguredFeatures.EUCALYPTUS_TREE_BEES : NaturaConfiguredFeatures.EUCALYPTUS_TREE;
     }
 }
